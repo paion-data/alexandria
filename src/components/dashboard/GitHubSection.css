@@ -1,0 +1,39 @@
+.github {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.github img {
+    position: absolute;
+    top: 3%;
+    right: -10%;
+}
+.github h2 {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+}
+
+.ripple {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    animation: rippleEffect 1s ease infinite;
+}
+
+@keyframes rippleEffect {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
