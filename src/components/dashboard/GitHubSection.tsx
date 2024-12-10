@@ -15,35 +15,15 @@
  */
 
 import './GitHubSection.css';
-import { useEffect, useState} from "react";
-import {RippleSpan} from "./styled";
 
 function GitHubSection() {
-
-  const [x, setX] = useState<string>("")
-  const [y, setY] = useState<string>("")
-
-  const handleClick = (event: any) => {
-    setX(event.clientX - event.target.offsetLeft + 'px')
-    setY( event.clientY - event.target.offsetTop + 'px')
-  }
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setX("")
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [x, y]);
 
   return (
       <>
         <a href="https://github.com/QubitPi/alexandria" style={{textDecoration: "none"}}>
-          <div className="github" onClick={handleClick}>
+          <div className="github">
             <h2>Fork it on GitHub</h2>
             <img src="images/github.png" width="80%" alt=""/>
-            <div>
-              {x !== "" && <RippleSpan left={x} top={y}></RippleSpan>}
-            </div>
           </div>
         </a>
       </>
