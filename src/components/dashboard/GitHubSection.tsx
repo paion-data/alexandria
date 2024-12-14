@@ -13,15 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import './GitHubSection.css';
+import {useState} from "react";
 
 function GitHubSection() {
 
+  const [isVisible, setIsVisible] = useState<boolean>(true)
+
+  const handleClick = () => {
+    setIsVisible(false)
+
+    // This side effect is used to make the GH button fade back in on browser backward operation
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+  }
+
   return (
       <>
-        <a href="https://github.com/QubitPi/alexandria" style={{textDecoration: "none"}}>
-          <div className="github">
+        <a
+            href="https://github.com/QubitPi/alexandria"
+            onClick={handleClick}
+            style={{
+              textDecoration: "none",
+              opacity: isVisible ? 1 : 0,
+              transition: 'opacity 1.0s ease-in-out'
+            }}
+        >
+          <div className={`github ${isVisible ? "" : "up"}`}>
             <h2>Fork it on GitHub</h2>
             <img src="images/github.png" width="80%" alt=""/>
           </div>

@@ -5,6 +5,12 @@
     padding: 1rem;
     position: relative;
     overflow: hidden;
+
+    transition: transform 1.0s ease-in-out;
+}
+
+.github.up {
+    transform: translateY(-50px);
 }
 
 .github img {
