@@ -15,7 +15,7 @@
  */
 
 import './App.css';
-import {Audios, Dashboard} from "./components";
+import {Grammar, Dashboard} from "./components";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <main>
           <section className="glass">
             <Dashboard />
-            <Audios />
+            <Grammar />
           </section>
         </main>
         <div className="circle1"></div>

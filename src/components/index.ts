@@ -14,5 +14,5 @@
  * limitations under the License.
  */
 
-export { default as Audios } from "./audios/Audios";
+export { default as Grammar } from "./grammar/Grammar";
 export { default as Dashboard } from "./dashboard/Dashboard";

@@ -25,27 +25,27 @@ function Dashboard() {
             <img src="./images/avatar.png" alt=""/>
           </div>
           <h3>Alexandria</h3>
-          <p>Library</p>
+          <p>Grammar</p>
         </div>
         <div className="links">
           <div className="link">
             <img src="images/library.png" alt=""/>
-            <h2>Aristotle</h2>
+            <h2>Ancient Greek</h2>
           </div>
           <div className="link">
             <img src="images/library.png" alt=""/>
-            <h2>Herodotus</h2>
+            <h2>Latin</h2>
           </div>
           <div className="link">
             <img src="images/library.png" alt=""/>
-            <h2>Xenophon</h2>
+            <h2>Classical Hebrew</h2>
           </div>
           <div className="link">
             <img src="images/library.png" alt=""/>
-            <h2>Hippocrates</h2>
+            <h2>Classical Sanskrit</h2>
           </div>
         </div>
-        <GitHubSection />
+        <GitHubSection/>
       </div>
   );
 }

@@ -6,12 +6,12 @@
 [![GitHub workflow status badge][GitHub workflow status badge]][GitHub workflow status URL]
 [![Apache License][Apache License Badge]][Apache License, Version 2.0]
 
-__Alexandria__ is a companion project of [Aristotle](https://aristotle.qubitpi.org) and hosts audio of converted Ancient
-Greek texts referenced from Loeb Classical Library. The following table summarizes the works:
+__Alexandria__ is a "flash card" style site for learning Grammar of the following languages:
 
-| Book                                                   | Audio                                                                   |
-|--------------------------------------------------------|-------------------------------------------------------------------------|
-| [Aristotle's Categories](pdf/aristotle-categories.pdf) | [Paragraph 1](./audio/aristotle-categories/aristotle-categories-p1.mp3) |
+- Ancient Greek
+- Latin
+- Classical Hebrew
+- Classical Sanskrit
 
 License
 -------
