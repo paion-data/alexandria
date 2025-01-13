@@ -17,6 +17,11 @@
 import './Dashboard.css';
 import GitHubSection from "./GitHubSection";
 
+import {ReactComponent as Greek} from "./greek.svg"
+import {ReactComponent as Latin} from "./latin.svg"
+import {ReactComponent as Hebrew} from "./hebrew.svg"
+import {ReactComponent as Sanskrit} from "./sanskrit.svg"
+
 function Dashboard() {
   return (
       <div className="dashboard">
@@ -29,20 +34,23 @@ function Dashboard() {
         </div>
         <div className="links">
           <div className="link">
-            <img src="images/library.png" alt=""/>
+            <Greek className="icon"/>
             <h2>Ancient Greek</h2>
           </div>
           <div className="link">
-            <img src="images/library.png" alt=""/>
+            <Latin className="icon"/>
             <h2>Latin</h2>
+            <h3>Coming Soon</h3>
           </div>
           <div className="link">
-            <img src="images/library.png" alt=""/>
+            <Hebrew className="icon"/>
             <h2>Classical Hebrew</h2>
+            <h3>Coming Soon</h3>
           </div>
           <div className="link">
-            <img src="images/library.png" alt=""/>
+            <Sanskrit className="icon"/>
             <h2>Classical Sanskrit</h2>
+            <h3>Coming Soon</h3>
           </div>
         </div>
         <GitHubSection/>
