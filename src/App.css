@@ -23,7 +23,8 @@
 :root {
   --cyan: #6cdbeb;
   --green: #65dfc9;
-  --darkblue: #426696
+  --darkblue: #426696;
+  --box-border-radius: 2rem
 }
 
 h1 {
@@ -62,7 +63,7 @@ main {
           rgba(255, 255, 255, 0.7),
           rgba(255, 255, 255, 0.3)
   );
-  border-radius: 2rem;
+  border-radius: var(--box-border-radius);
   z-index: 2;
   backdrop-filter: blur(2rem);
   display: flex;
