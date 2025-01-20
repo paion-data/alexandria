@@ -16,6 +16,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { sentryWebpackPlugin } = require("@sentry/webpack-plugin");
 
 const imageInlineSizeLimit = parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT || "10000");
 
@@ -25,6 +26,7 @@ module.exports = function (webpackEnv) {
   return {
     entry: "./packages/alexandria-app/src/index.tsx",
     mode: isProdEnvironment ? "production" : "development",
+    devtool: "source-map",
     output: {
       publicPath: "/",
       path: path.resolve(__dirname, "../../dist"),
@@ -89,6 +91,11 @@ module.exports = function (webpackEnv) {
             : undefined,
         ),
       ),
+      sentryWebpackPlugin({
+        authToken: process.env.SENTRY_AUTH_TOKEN,
+        org: "paion-data",
+        project: "qubitpi-alexandria",
+      }),
     ],
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".json"],

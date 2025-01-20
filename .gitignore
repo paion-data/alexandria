@@ -39,3 +39,6 @@ docs/.yarn/
 /cypress/screenshots/
 /cypress/videos/
 /cypress/downloads/
+
+# Sentry Config File
+.env.sentry-build-plugin

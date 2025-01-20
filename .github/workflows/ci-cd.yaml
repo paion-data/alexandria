@@ -205,7 +205,6 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: e2e-tests
-    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -217,17 +216,14 @@ jobs:
           node-version: ${{ env.node_version }}
       - name: Install dependencies
         run: npm install -g yarn@1.22.19 && yarn
-      #      - name: Load .env file
-      #        run: mv .env.prod .env
       - name: Test production build
         run: yarn build
-      #      - name: Upload sourcemaps to sentry.io
-      #        run: yarn sentry:sourcemaps
-      #        env:
-      #          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       - name: Load CNAME
         run: cp CNAME dist
       - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -19,6 +19,19 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
+import * as Sentry from "@sentry/react";
+
+if (process.env.NODE_ENV === "production") {
+  Sentry.init({
+    dsn: "https://1565f8a77846432e7babfdad9ad99a8e@o4505480921022464.ingest.us.sentry.io/4508675053977600",
+    integrations: [Sentry.browserTracingIntegration(), Sentry.replayIntegration()],
+    tracesSampleRate: 1.0,
+    tracePropagationTargets: ["localhost", /^https:\/\/alexandria\.qubitpi\.org/],
+    replaysSessionSampleRate: 0.1,
+    replaysOnErrorSampleRate: 1.0,
+  });
+}
+
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
