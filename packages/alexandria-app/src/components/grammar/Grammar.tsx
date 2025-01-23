@@ -18,12 +18,18 @@ import "./Grammar.css";
 import { useState } from "react";
 
 import first from "./first.png";
-import type { Language } from "../../appSlice";
-import { ANCIENT_GREEK, LATIN, selectCardModalShow, setCardModalShow } from "../../appSlice";
+import type { Language } from "../../../../alexandria-redux";
+import {
+  ANCIENT_GREEK,
+  LATIN,
+  selectCardModalShow,
+  setCardModalShow,
+  useAppDispatch,
+  useAppSelector,
+} from "../../../../alexandria-redux";
 import { entries as greekEntries } from "./ancient-greek/entries";
 import { entries as latinEntries } from "./latin/entries";
 import { type Entry } from "./entry";
-import { useAppDispatch, useAppSelector } from "../../hooks";
 
 interface GrammarProps {
   langauge: Language;

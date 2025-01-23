@@ -22,8 +22,7 @@ import Latin from "./latin.svg";
 import Hebrew from "./hebrew.svg";
 import Sanskrit from "./sanskrit.svg";
 import avatar from "./avatar.png";
-import { useAppDispatch } from "../../hooks";
-import { ANCIENT_GREEK, LATIN, setLanguage } from "../../appSlice";
+import { useAppDispatch, ANCIENT_GREEK, LATIN, setLanguage } from "../../../../alexandria-redux";
 
 function Dashboard(): JSX.Element {
   const dispatch = useAppDispatch();

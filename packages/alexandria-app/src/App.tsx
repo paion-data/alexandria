@@ -16,8 +16,7 @@
 
 import "./App.css";
 import { Grammar, Dashboard } from "./components";
-import { useAppSelector } from "./hooks";
-import { selectLanguage } from "./appSlice";
+import { useAppSelector, selectLanguage } from "../../alexandria-redux";
 
 function App(): JSX.Element {
   const language = useAppSelector(selectLanguage);

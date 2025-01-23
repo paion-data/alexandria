@@ -22,7 +22,16 @@
 - Classical Hebrew
 - Classical Sanskrit
 
+The app is hosted at [alexandria.qubitpi.org](https://alexandria.qubitpi.org/).
+
 ## Development
+
+Alexandria has the following packages:
+
+- [`alexandria-app`](packages/alexandria-app): holding business logics of the app
+- [`alexandria-redux`](packages/alexandria-redux): maintaining all Redux-related logic and App states. Alexandria uses
+  [Redux state management][Redux] instead of [React state management][useState] for better decoupling of components
+  which enhances the maintainability of the app.
 
 ### Getting Source Code
 
@@ -52,14 +61,19 @@ yarn
 
 ### Automatically Formatting Codebase
 
+When CI/CD complains about "Code style check" as the following:
+
+![](./docs/cicd-code-style-check-error-example.png)
+
+Simply run the following command at project root which will auto formatting the codebase using Prettier:
+
 ```console
 yarn prettier --ignore-path .gitignore . --write
 ```
 
-### State Management
-
-Alexandria uses [Redux state management][Redux] instead of [React state management][useState] for better decoupling of
-components.
+> [!TIP]
+>
+> It's always a good practice to auto-formatting code whenever convenient. <img src="https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7.png?raw=true" width="80px">
 
 ## Application Monitoring
 

@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2025 Jiaqi Liu. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import App from "./App";
-import { Provider } from "react-redux";
-import { store } from "../../alexandria-redux/src/store";
+export {
+  ANCIENT_GREEK,
+  LATIN,
+  CLASSICAL_HEBREW,
+  CLASSICAL_SANSCRIT,
+  type Language,
+  setLanguage,
+  setCardModalShow,
+  selectLanguage,
+  selectCardModalShow,
+} from "./src/appSlice";
 
-test("renders learn react link", () => {
-  render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-  );
-  const linkElement = screen.getByText(/Alexandria/i);
-  expect(linkElement).toBeInTheDocument();
-});
+export { useAppSelector, useAppDispatch } from "./src/hooks";
+export { store } from "./src/store";
