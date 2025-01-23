@@ -38,7 +38,7 @@ export const appSlice = createSlice({
   name: "app",
   initialState,
   reducers: {
-    setLanguage: (state, action: PayloadAction<boolean>) => {
+    setLanguage: (state, action: PayloadAction<Language>) => {
       state.language = action.payload;
     },
     setCardModalShow: (state, action: PayloadAction<boolean>) => {

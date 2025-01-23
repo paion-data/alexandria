@@ -19,8 +19,9 @@ import { useState } from "react";
 
 import first from "./first.png";
 import type { Language } from "../../appSlice";
-import { ANCIENT_GREEK, selectCardModalShow, setCardModalShow } from "../../appSlice";
-import { entries } from "./ancient-greek/entries";
+import { ANCIENT_GREEK, LATIN, selectCardModalShow, setCardModalShow } from "../../appSlice";
+import { entries as greekEntries } from "./ancient-greek/entries";
+import { entries as latinEntries } from "./latin/entries";
 import { type Entry } from "./entry";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 
@@ -28,7 +29,10 @@ interface GrammarProps {
   langauge: Language;
 }
 
-const CARDS_BY_LANGUAGE = new Map<Language, [Entry]>([[ANCIENT_GREEK, entries]]);
+const CARDS_BY_LANGUAGE = new Map<Language, [Entry]>([
+  [ANCIENT_GREEK, greekEntries],
+  [LATIN, latinEntries],
+]);
 
 function Grammar(props: GrammarProps): JSX.Element {
   const cardModalShow = useAppSelector(selectCardModalShow);

@@ -22,8 +22,12 @@ import Latin from "./latin.svg";
 import Hebrew from "./hebrew.svg";
 import Sanskrit from "./sanskrit.svg";
 import avatar from "./avatar.png";
+import { useAppDispatch } from "../../hooks";
+import { ANCIENT_GREEK, LATIN, setLanguage } from "../../appSlice";
 
 function Dashboard(): JSX.Element {
+  const dispatch = useAppDispatch();
+
   return (
     <div className="dashboard">
       <div className="project">
@@ -34,18 +38,17 @@ function Dashboard(): JSX.Element {
         <p>Grammar</p>
       </div>
       <div className="links">
-        <div className="link">
+        <div className="link" onClick={() => dispatch(setLanguage(ANCIENT_GREEK))}>
           <div className="icon">
             <img src={Greek} alt="Greek" />
           </div>
           <h2>Ancient Greek</h2>
         </div>
-        <div className="link">
+        <div className="link" onClick={() => dispatch(setLanguage(LATIN))}>
           <div className="icon">
             <img src={Latin} alt="Latin" />
           </div>
           <h2>Latin</h2>
-          <h3>Coming Soon</h3>
         </div>
         <div className="link">
           <div className="icon">
