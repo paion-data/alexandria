@@ -16,3 +16,4 @@
 
 export { default as Grammar } from "./grammar/Grammar";
 export { default as Dashboard } from "./dashboard/Dashboard";
+export { default as Table } from "./table/Table";

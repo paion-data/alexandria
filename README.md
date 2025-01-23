@@ -6,6 +6,8 @@
     <a href="https://github.com/QubitPi/alexandria/actions/workflows/ci-cd.yaml"><img src="https://img.shields.io/github/actions/workflow/status/QubitPi/alexandria/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=CI/CD" alt="CI/CD"/></a>
     <a href="https://paion-data.sentry.io/issues/?project=4508675053977600"><img src="https://img.shields.io/badge/Application%20Monitoring-362D59.svg?style=for-the-badge&logo=sentry&logoColor=white" alt="sentry.io"/></a>
     <img src="https://img.shields.io/badge/NODE-18-339933?logo=Node.js&logoColor=white&labelColor=66cc33&style=for-the-badge" alt="Node 18"/>
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge" alt="TypeScript"/>
+    <img src="https://img.shields.io/badge/webpack-8DD6F9?logo=webpack&logoColor=white&style=for-the-badge" alt="webpack"/>
     <a href="https://yarnpkg.com/"><img src="https://img.shields.io/badge/Yarn%202-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn 2"/></a>
     <a href="https://eslint.org/"><img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint"/></a>
     <a href="https://prettier.io/"><img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white" alt="Prettier"/></a>
@@ -15,12 +17,26 @@
     <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white" alt="Apache License"/></a>
 </div>
 
-**Alexandria** is a content-opinionated web app for learning Grammar of the following languages:
+<!-- TOC -->
+
+- [Introduction](#introduction)
+- [Development](#development)
+  - [Getting Source Code](#getting-source-code)
+  - [Scripts](#scripts)
+  - [Automatically Formatting Codebase](#automatically-formatting-codebase)
+- [Application Monitoring](#application-monitoring)
+- [License](#license)
+
+<!-- TOC -->
+
+## Introduction
+
+**Alexandria** is a content-opinionated web app for memorizing Grammar of the following languages:
 
 - Ancient Greek
 - Latin
-- Classical Hebrew
-- Classical Sanskrit
+- Hebrew (Classical)
+- Sanskrit (Classical)
 
 The app is hosted at [alexandria.qubitpi.org](https://alexandria.qubitpi.org/).
 
@@ -29,9 +45,10 @@ The app is hosted at [alexandria.qubitpi.org](https://alexandria.qubitpi.org/).
 Alexandria has the following packages:
 
 - [`alexandria-app`](packages/alexandria-app): holding business logics of the app
-- [`alexandria-redux`](packages/alexandria-redux): maintaining all Redux-related logic and App states. Alexandria uses
-  [Redux state management][Redux] instead of [React state management][useState] for better decoupling of components
-  which enhances the maintainability of the app.
+- [`alexandria-redux`](packages/alexandria-redux): maintaining all App states. Alexandria uses
+  [Redux state management][Redux]
+  [![Redux Badge](https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=for-the-badge)][Redux]
+  instead of [React state management][useState] for a much more maintainable decoupling of React components
 
 ### Getting Source Code
 
@@ -73,7 +90,7 @@ yarn prettier --ignore-path .gitignore . --write
 
 > [!TIP]
 >
-> It's always a good practice to auto-formatting code whenever convenient. <img src="https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7.png?raw=true" width="80px">
+> It's always a good practice to auto-formatting code whenever convenient <img src="https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7.png?raw=true" width="60px" />
 
 ## Application Monitoring
 

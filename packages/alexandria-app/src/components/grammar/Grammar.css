@@ -131,12 +131,6 @@
   font-family: Porson;
 }
 
-.card-modal .card-modal-content .img-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card-modal.active {
   top: 0;
   transition: top 0ms ease-in-out 0ms;

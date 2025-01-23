@@ -14,25 +14,34 @@
  * limitations under the License.
  */
 
-import "./App.css";
-import { Grammar, Dashboard } from "./components";
-import { useAppSelector, selectLanguage } from "../../alexandria-redux";
+import "./Table.css";
 
-function App(): JSX.Element {
-  const language = useAppSelector(selectLanguage);
-
-  return (
-    <>
-      <main>
-        <section className="glass">
-          <Dashboard />
-          <Grammar language={language} />
-        </section>
-      </main>
-      <div className="circle1"></div>
-      <div className="circle2"></div>
-    </>
-  );
+interface TableProps {
+  header: JSX.Element[];
+  rows: JSX.Element[JSX.Element[]];
 }
 
-export default App;
+export default function Table(props: TableProps): JSX.Element {
+  return (
+    <table className="styled-table">
+      <thead>
+        <tr>
+          {props.header.map((it) => {
+            return <th key={it}>{it}</th>;
+          })}
+        </tr>
+      </thead>
+      <tbody>
+        {props.rows.map((row) => {
+          return (
+            <tr key={row.toString()}>
+              {row.map((it) => {
+                return <td key={it}>{it}</td>;
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+}

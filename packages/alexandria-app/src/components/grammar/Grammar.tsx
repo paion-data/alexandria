@@ -32,7 +32,7 @@ import { entries as latinEntries } from "./latin/entries";
 import { type Entry } from "./entry";
 
 interface GrammarProps {
-  langauge: Language;
+  language: Language;
 }
 
 const CARDS_BY_LANGUAGE = new Map<Language, [Entry]>([
@@ -49,14 +49,14 @@ function Grammar(props: GrammarProps): JSX.Element {
   return (
     <div className="audios">
       <div className="status">
-        <h1>{props.langauge}</h1>
+        <h1>{props.language}</h1>
         <input type="text" />
       </div>
       <div className="cards">
-        {CARDS_BY_LANGUAGE.get(props.langauge)?.map((entry) => {
+        {CARDS_BY_LANGUAGE.get(props.language)?.map((entry) => {
           return (
             <div
-              key={props.langauge + entry.title}
+              key={props.language + entry.title}
               className="card"
               onClick={() => {
                 setModalContent(entry.cardContent);
