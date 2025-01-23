@@ -18,36 +18,56 @@ import "./Grammar.css";
 import { useState } from "react";
 
 import first from "./first.png";
-import { NounDeclensions } from "./ancient-greek";
+import type { Language } from "../../appSlice";
+import { ANCIENT_GREEK, selectCardModalShow, setCardModalShow } from "../../appSlice";
+import { entries } from "./ancient-greek/entries";
+import { type Entry } from "./entry";
+import { useAppDispatch, useAppSelector } from "../../hooks";
 
-function Grammar(): JSX.Element {
-  const [cardModalShow, setCardModalShow] = useState<boolean>(false);
+interface GrammarProps {
+  langauge: Language;
+}
+
+const CARDS_BY_LANGUAGE = new Map<Language, [Entry]>([[ANCIENT_GREEK, entries]]);
+
+function Grammar(props: GrammarProps): JSX.Element {
+  const cardModalShow = useAppSelector(selectCardModalShow);
   const [modalContent, setModalContent] = useState<JSX.Element>(null);
+
+  const dispatch = useAppDispatch();
 
   return (
     <div className="audios">
       <div className="status">
-        <h1>Ancient Greek</h1>
+        <h1>{props.langauge}</h1>
         <input type="text" />
       </div>
       <div className="cards">
-        <div
-          className="card"
-          onClick={() => {
-            setModalContent(NounDeclensions);
-            setCardModalShow(true);
-          }}
-        >
-          <img src={first} width="10%" alt="" />
-          <div className="card-info">
-            <h2>Noun Declensions</h2>
-            <p>1st, 2nd, and 3rd declensions</p>
-            <div className="progress"></div>
-          </div>
-          <h2 className="percentage">10%</h2>
-        </div>
+        {CARDS_BY_LANGUAGE.get(props.langauge)?.map((entry) => {
+          return (
+            <div
+              key={props.langauge + entry.title}
+              className="card"
+              onClick={() => {
+                setModalContent(entry.cardContent);
+                dispatch(setCardModalShow(true));
+              }}
+            >
+              <img src={first} width="10%" alt="" />
+              <div className="card-info">
+                <h2>{entry.title}</h2>
+                <p>{entry.subTitle}</p>
+                <div className="progress"></div>
+              </div>
+              <h2 className="percentage">{entry.progress}</h2>
+            </div>
+          );
+        })}
         <div className={cardModalShow ? "card-modal active" : "card-modal"}>
-          <div className={cardModalShow ? "overlay active" : "overlay"} onClick={() => setCardModalShow(false)}></div>
+          <div
+            className={cardModalShow ? "overlay active" : "overlay"}
+            onClick={() => dispatch(setCardModalShow(false))}
+          ></div>
           <div className={cardModalShow ? "card-modal-content active" : "card-modal-content"}>{modalContent}</div>
         </div>
       </div>

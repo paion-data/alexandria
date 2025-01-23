@@ -1,5 +1,5 @@
 /**
- * Copyright 2025 Jiaqi Liu. All rights reserved.
+ * Copyright 2025 Jiaqi Liu
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,19 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { configureStore } from "@reduxjs/toolkit";
+import appReducer from "./appSlice";
 
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import App from "./App";
-import { Provider } from "react-redux";
-import { store } from "./store";
-
-test("renders learn react link", () => {
-  render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-  );
-  const linkElement = screen.getByText(/Alexandria/i);
-  expect(linkElement).toBeInTheDocument();
+export const store = configureStore({
+  reducer: {
+    app: appReducer,
+  },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

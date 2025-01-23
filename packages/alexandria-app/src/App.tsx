@@ -16,14 +16,18 @@
 
 import "./App.css";
 import { Grammar, Dashboard } from "./components";
+import { useAppSelector } from "./hooks";
+import { selectLanguage } from "./appSlice";
 
 function App(): JSX.Element {
+  const language = useAppSelector(selectLanguage);
+
   return (
     <>
       <main>
         <section className="glass">
           <Dashboard />
-          <Grammar />
+          <Grammar langauge={language} />
         </section>
       </main>
       <div className="circle1"></div>
