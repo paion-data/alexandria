@@ -45,10 +45,10 @@ The app is hosted at [alexandria.qubitpi.org](https://alexandria.qubitpi.org/).
 Alexandria has the following packages:
 
 - [`alexandria-app`](packages/alexandria-app): holding business logics of the app
-- [`alexandria-redux`](packages/alexandria-redux): maintaining all App states. Alexandria uses
+- [`alexandria-redux`](packages/alexandria-redux): managing all app states. Alexandria uses
   [Redux state management][Redux]
   [![Redux Badge](https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=for-the-badge)][Redux]
-  instead of [React state management][useState] for a much more maintainable decoupling of React components
+  instead of ~~[React state management][useState]~~ for a much more maintainable decoupling of React components
 
 ### Getting Source Code
 

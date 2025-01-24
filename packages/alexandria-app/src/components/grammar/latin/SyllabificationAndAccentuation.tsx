@@ -13,6 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import StandingCardList from "../../list/StandingCardList";
+
+import Ultima from "./ultima.svg";
+import Penult from "./penult.svg";
+import Antepenult from "./antepenult.svg";
 
 export const TITLE = "Syllabification & Accentuation";
 
@@ -21,27 +26,49 @@ export default function SyllabificationAndAccentuation(): JSX.Element {
     <>
       <h2>{TITLE}</h2>
       <h3>Syllabification</h3>
-      <p>
-        Every Latin word has as many syllables as it has vowels or diphthongs. In dividing a word into syllables, a
-        consonant after a vowel goes with the following syllable:
-      </p>
-      <p>mu/tam; ta/men</p>
+      <p>In dividing a word into syllables, a consonant after a vowel goes with the following syllable:</p>
+      <p>mū/tam; ta/men</p>
       <p>
         When a vowel or diphthong is followed by two or more consonants, the first consonant goes with the first
         syllable, the remainder with the next syllable:
       </p>
-      <p>for/tU/na; ad/lo/que/rer</p>
+      <p>for/tū/na; ad/lo/que/rer</p>
       <h3>Accentuation</h3>
-      Every Latin word has one syllable which is slightly stressed over the others.
-      <ul>
-        <li>ultima = the last syllable</li>
-        <li>penult = the second syllable from the end</li>
-        <li>antepenult = third syllable from the end</li>
-      </ul>
-      <p>In words of two syllables, the penult receives the accent:</p>
+
+      <p>Every Latin word has one syllable which is slightly stressed over the others.</p>
+
+      <StandingCardList
+        items={[
+          {
+            icon: <img style={{ width: "70px" }} src={Ultima} alt="Ultima" />,
+            title: "Ultima",
+            desc: "the last syllable",
+          },
+          {
+            icon: <img style={{ width: "70px" }} src={Penult} alt="Penult" />,
+            title: "Penult",
+            desc: "the second syllable from the end",
+          },
+          {
+            icon: <img style={{ width: "70px" }} src={Antepenult} alt="Antepenult" />,
+            title: "Antepenult",
+            desc: "third syllable from the end",
+          },
+        ]}
+      />
+      <p>The only two syllables in a Latin word which may receive accent are the penult and the antepenult.</p>
+      <p>In words of two syllables, the penult receives the accent: múltās, géntēs, véctus</p>
       <p>
         In words of more than two syllables, the penult receives the accent if it is long; if the penult is short, the
-        accent is placed on the antepenult.
+        accent is placed on the antepenult. A syllable can be long in one of two ways:
+      </p>
+      <p>
+        1. <i>Length by nature</i>: If the syllable contains a long vowel or a diphthong, it is said to be long{" "}
+        <i>by nature</i>
+      </p>
+      <p>
+        2. <i>Length by position</i>: If the syllable contains a vowel which is followed by 2 consonants, it is said to
+        be long <i>by position</i>. <i>x</i> (=ks), by the way, is a double consonant
       </p>
     </>
   );
