@@ -31,6 +31,10 @@ function App(): JSX.Element {
       </main>
       <div className="circle1"></div>
       <div className="circle2"></div>
+
+      <div style={{ position: "absolute", left: "47%", bottom: "2%" }}>
+        <a href="https://beian.miit.gov.cn/#/Integrated/index">粤ICP备2024234224</a>
+      </div>
     </>
   );
 }
