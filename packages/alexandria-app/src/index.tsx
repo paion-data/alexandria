@@ -1,5 +1,5 @@
 /**
- * Copyright 2025 Jiaqi Liu. All rights reserved.
+ * Copyright 2025 Paion Data. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,10 +25,10 @@ import { store } from "../../alexandria-redux";
 
 if (process.env.NODE_ENV === "production") {
   Sentry.init({
-    dsn: "https://1565f8a77846432e7babfdad9ad99a8e@o4505480921022464.ingest.us.sentry.io/4508675053977600",
+    dsn: "https://722444be2cd9e101658d80f10aa61bf4@o4505480921022464.ingest.us.sentry.io/4508699067023360",
     integrations: [Sentry.browserTracingIntegration(), Sentry.replayIntegration()],
     tracesSampleRate: 1.0,
-    tracePropagationTargets: ["localhost", /^https:\/\/alexandria\.qubitpi\.org/],
+    tracePropagationTargets: ["localhost", /^https:\/\/alexandria\.paion-data\.com/],
     replaysSessionSampleRate: 0.1,
     replaysOnErrorSampleRate: 1.0,
   });
