@@ -20,9 +20,9 @@ import { type RootState } from "./store";
 export const ANCIENT_GREEK = "Ancient Greek";
 export const LATIN = "Latin";
 export const CLASSICAL_HEBREW = "Classical Hebrew";
-export const CLASSICAL_SANSCRIT = "Classical Sanskrit";
+export const CLASSICAL_SANSKRIT = "Classical Sanskrit";
 
-export type Language = typeof ANCIENT_GREEK | typeof LATIN | typeof CLASSICAL_HEBREW | typeof CLASSICAL_SANSCRIT;
+export type Language = typeof ANCIENT_GREEK | typeof LATIN | typeof CLASSICAL_HEBREW | typeof CLASSICAL_SANSKRIT;
 
 interface AppState {
   language: Language;

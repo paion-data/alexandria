@@ -19,17 +19,11 @@ import { useState } from "react";
 
 import first from "./first.png";
 import type { Language } from "../../../../alexandria-redux";
-import {
-  ANCIENT_GREEK,
-  LATIN,
-  selectCardModalShow,
-  setCardModalShow,
-  useAppDispatch,
-  useAppSelector,
-} from "../../../../alexandria-redux";
+import { ANCIENT_GREEK, LATIN, setCardModalShow, useAppDispatch } from "../../../../alexandria-redux";
 import { entries as greekEntries } from "./ancient-greek/entries";
 import { entries as latinEntries } from "./latin/entries";
 import { type Entry } from "./entry";
+import Modal from "./modal/Modal";
 
 interface GrammarProps {
   language: Language;
@@ -41,14 +35,13 @@ const CARDS_BY_LANGUAGE = new Map<Language, [Entry]>([
 ]);
 
 function Grammar(props: GrammarProps): JSX.Element {
-  const cardModalShow = useAppSelector(selectCardModalShow);
   const [modalContent, setModalContent] = useState<JSX.Element>(null);
 
   const dispatch = useAppDispatch();
 
   return (
-    <div className="audios">
-      <div className="status">
+    <div className="grammar">
+      <div className="language">
         <h1>{props.language}</h1>
         <input type="text" />
       </div>
@@ -73,14 +66,8 @@ function Grammar(props: GrammarProps): JSX.Element {
             </div>
           );
         })}
-        <div className={cardModalShow ? "card-modal active" : "card-modal"}>
-          <div
-            className={cardModalShow ? "overlay active" : "overlay"}
-            onClick={() => dispatch(setCardModalShow(false))}
-          ></div>
-          <div className={cardModalShow ? "card-modal-content active" : "card-modal-content"}>{modalContent}</div>
-        </div>
       </div>
+      <Modal modalContent={modalContent} />
     </div>
   );
 }

@@ -18,7 +18,7 @@ export {
   ANCIENT_GREEK,
   LATIN,
   CLASSICAL_HEBREW,
-  CLASSICAL_SANSCRIT,
+  CLASSICAL_SANSKRIT,
   type Language,
   setLanguage,
   setCardModalShow,
