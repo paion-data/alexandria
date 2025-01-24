@@ -33,10 +33,14 @@
 
 **Alexandria** is a content-opinionated web app for memorizing Grammar of the following languages:
 
+- German
 - Ancient Greek
 - Latin
 - Hebrew (Classical)
 - Sanskrit (Classical)
+
+It was initiated when I needed a centralized grammar reference of languages I was studying so that I can utilize my
+fragmented time more efficiently by peeking into them with my mobile phone.
 
 The app is hosted at [alexandria.qubitpi.org](https://alexandria.qubitpi.org/).
 

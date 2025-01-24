@@ -19,6 +19,7 @@ import GitHubSection from "./GitHubSection";
 
 import Greek from "./greek.svg";
 import Latin from "./latin.svg";
+import German from "./german.svg";
 import Hebrew from "./hebrew.svg";
 import Sanskrit from "./sanskrit.svg";
 import avatar from "./avatar.png";
@@ -48,6 +49,13 @@ function Dashboard(): JSX.Element {
             <img src={Latin} alt="Latin" />
           </div>
           <h2>Latin</h2>
+        </div>
+        <div className="link">
+          <div className="icon">
+            <img src={German} alt="German" />
+          </div>
+          <h2>German</h2>
+          <h3>Coming Soon</h3>
         </div>
         <div className="link">
           <div className="icon">
