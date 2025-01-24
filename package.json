@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QubitPi/alexandria.git"
+    "url": "git+https://github.com/paion-data/alexandria.git"
   },
   "author": "Jiaqi Liu",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/QubitPi/alexandria/issues"
+    "url": "https://github.com/paion-data/alexandria/issues"
   },
-  "homepage": "https://github.com/QubitPi/alexandria#readme",
+  "homepage": "https://github.com/paion-data/alexandria#readme",
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
     "@sentry/react": "^8.50.0",
