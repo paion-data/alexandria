@@ -1,7 +1,8 @@
 {
   "name": "alexandria",
   "workspaces": [
-    "./packages/alexandria-app"
+    "./packages/alexandria-app",
+    "./packages/alexandria-redux"
   ],
   "version": "0.1.0",
   "engines": {

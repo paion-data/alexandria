@@ -3360,6 +3360,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"alexandria-redux@workspace:packages/alexandria-redux":
+  version: 0.0.0-use.local
+  resolution: "alexandria-redux@workspace:packages/alexandria-redux"
+  languageName: unknown
+  linkType: soft
+
 "alexandria@workspace:.":
   version: 0.0.0-use.local
   resolution: "alexandria@workspace:."
