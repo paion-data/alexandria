@@ -15,7 +15,7 @@
  */
 
 import "./Modal.css";
-import { selectCardModalShow, setCardModalShow, useAppDispatch, useAppSelector } from "../../../../../alexandria-redux";
+import { selectCardModalShow, setCardModalShow, useAppDispatch, useAppSelector } from "alexandria-redux";
 
 interface ModalProps {
   modalContent: JSX.Element;

@@ -18,8 +18,8 @@ import "./Grammar.css";
 import { useState } from "react";
 
 import first from "./first.png";
-import type { Language } from "../../../../alexandria-redux";
-import { ANCIENT_GREEK, LATIN, setCardModalShow, useAppDispatch } from "../../../../alexandria-redux";
+import type { Language } from "alexandria-redux";
+import { ANCIENT_GREEK, LATIN, setCardModalShow, useAppDispatch } from "alexandria-redux";
 import { entries as greekEntries } from "./ancient-greek/entries";
 import { entries as latinEntries } from "./latin/entries";
 import { type Entry } from "./entry";
