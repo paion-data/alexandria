@@ -16,12 +16,19 @@
 
 import type { Entry } from "../entry";
 import SyllabificationAndAccentuation, { TITLE } from "./SyllabificationAndAccentuation";
+import Tenses from "./Tenses";
 
-export const entries: [Entry] = [
+export const entries: Entry[] = [
   {
     title: TITLE,
     subTitle: "Basic Latin",
     progress: "50%",
     cardContent: SyllabificationAndAccentuation,
+  },
+  {
+    title: "Latin Tenses",
+    subTitle: "There are 6 tenses in indicative mood",
+    progress: "100%",
+    cardContent: Tenses,
   },
 ];
