@@ -28,3 +28,4 @@ jobs:
       use-custom-lycheeignore-file: true
       user-name: QubitPi
       user-email: jack20220723@gmail.com
+      cname: alexandria.paion-data.com
